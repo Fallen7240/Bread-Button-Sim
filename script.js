@@ -83,14 +83,18 @@ function rebirthReset() {
   multiAmount1 = 1;
   multiAmount2 = 5;
   multiAmount3 = 10;
-  multiPrice1 = 5;
-  multiPrice2 = 50;
-  multiPrice3 = 500;
-  multiAmount1 *= rebirth;
+  multiAmount4 = 25;
+  multiAmount5 = 50;
+ multiPrice1 = 5;
+ multiPrice2 = 50;
+ multiPrice3 = 500;
+ multiPrice4 = 5000;
+ multiPrice5 = 10000;
+multiAmount1 *= rebirth;
   multiAmount2 *= rebirth;
   multiAmount3 *= rebirth;
   updateUI();
-  saveGame(); // Save after reset
+  saveGame();
 }
 
 //Multi Upgrades
@@ -126,7 +130,6 @@ function upgradeMultiplier(upgradeIndex) {
     money -= price;
     multi += amount;
 
-    // Update the corresponding price directly
     switch (upgradeIndex) {
       case 0:
         multiPrice1 *= 1.5;
@@ -146,7 +149,7 @@ function upgradeMultiplier(upgradeIndex) {
     }
 
     updateUI();
-    saveGame(); // Save game after purchase
+    saveGame(); 
   }
 }
 function multiUpgrade1() {
