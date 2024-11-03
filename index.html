@@ -1,33 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Bread Button Sim</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
 
-<head>
-	<title>Bread Button Sim</title>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width" />
-	<link rel="stylesheet" href="styles.css" />
-	<script src="script.js"></script>
-</head>
-
-<body>
-
-		<div class="scoreCounter">
-			<p id="score1" class="score">Money <span id="money">0</span></p>
-<p id="score2" class="score">Multi <span id="multi">1</span></p>
-			<p id="score3" class="score">Rebirth <span id="rebirth">1</span></p>
-		</div>
+  <body>
+    <div class="scoreCounter">
+      <p id="score1" class="score">Money <span id="money">0</span></p>
+      <p id="score2" class="score">Multi <span id="multi">1</span></p>
+      <p id="score3" class="score">Rebirth <span id="rebirth">1</span></p>
+    </div>
 
     <div class="multiUpgrades">
-    <button class="multiButton" id="multiButton1" onclick="multiUpgrade1()">+<span id="multiAmount1">1</span> Multi<br>$<span id="multiPrice1">5</span></button>
-    <button class="multiButton" id="multiButton2" onclick="multiUpgrade2()">+<span id="multiAmount2">5</span> Multi<br>$<span id="multiPrice2">50</span></button>
-    <button class="multiButton" id="multiButton3" onclick="multiUpgrade3()">+<span id="multiAmount3">10</span> Multi<br>$<span id="multiPrice3">500</span></button>
-</div>
-<br>
-<div class="rebirthUpgrades">
-<button class="rebirthButton" id="rebirthButton1" onclick="rebirth1()">+1 Rebirth<br><span id="rebirthPrice1">100</span> Multi</button>
-<button class="rebirthButton" id="rebirthButton2" onclick="rebirth2()">+5 Rebirth<br><span id="rebirthPrice1">1000</span> Multi</button>
-</div>
-
-
-</body>
+      <button class="multiButton" id="multiButton1" onclick="multiUpgrade1()">
+        +<span id="multiAmount1">1</span> Multi<br />$<span id="multiPrice1"
+          >5</span
+        >
+      </button>
+      <button class="multiButton" id="multiButton2" onclick="multiUpgrade2()">
+        +<span id="multiAmount2">5</span> Multi<br />$<span id="multiPrice2"
+          >50</span
+        >
+      </button>
+      <button class="multiButton" id="multiButton3" onclick="multiUpgrade3()">
+        +<span id="multiAmount3">10</span> Multi<br />$<span id="multiPrice3"
+          >500</span
+        >
+      </button>
+      <button class="multiButton" id="multiButton4" onclick="multiUpgrade4()">
+        +<span id="multiAmount4">25</span> Multi<br />$<span id="multiPrice4"
+          >5000</span
+        >
+      </button>
+      <button class="multiButton" id="multiButton5" onclick="multiUpgrade5()">
+        +<span id="multiAmount5">50</span> Multi<br />$<span id="multiPrice5"
+          >10000</span
+        >
+      </button>
+    </div>
+    <br />
+    <div class="rebirthUpgrades">
+      <button class="rebirthButton" id="rebirthButton1" onclick="rebirth1()">
+        +1 Rebirth<br /><span id="rebirthPrice1">100</span> Multi
+      </button>
+      <button class="rebirthButton" id="rebirthButton2" onclick="rebirth2()">
+        +5 Rebirth<br /><span id="rebirthPrice1">1000</span> Multi
+      </button>
+    </div>
+  </body>
 </html>
