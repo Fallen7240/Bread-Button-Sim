@@ -14,12 +14,58 @@ let multiPrice1 = 5,
 let rebirthPrice1 = 100,
   rebirthPrice2 = 1000;
 
+// Load game data from localStorage
+function loadGame() {
+  const savedData = JSON.parse(localStorage.getItem('gameData'));
+  if (savedData) {
+    money = savedData.money || 0;
+    multi = savedData.multi || 1;
+    rebirth = savedData.rebirth || 1;
+    multiAmount1 = savedData.multiAmount1 || 1;
+    multiAmount2 = savedData.multiAmount2 || 5;
+    multiAmount3 = savedData.multiAmount3 || 10;
+    multiAmount4 = savedData.multiAmount4 || 25;
+    multiAmount5 = savedData.multiAmount5 || 50;
+    multiPrice1 = savedData.multiPrice1 || 5;
+    multiPrice2 = savedData.multiPrice2 || 50;
+    multiPrice3 = savedData.multiPrice3 || 500;
+    multiPrice4 = savedData.multiPrice4 || 5000;
+    multiPrice5 = savedData.multiPrice5 || 10000;
+    rebirthPrice1 = savedData.rebirthPrice1 || 100;
+    rebirthPrice2 = savedData.rebirthPrice2 || 1000;
+  }
+  updateUI();
+}
+
+// Save game data to localStorage
+function saveGame() {
+  const gameData = {
+    money,
+    multi,
+    rebirth,
+    multiAmount1,
+    multiAmount2,
+    multiAmount3,
+    multiAmount4,
+    multiAmount5,
+    multiPrice1,
+    multiPrice2,
+    multiPrice3,
+    multiPrice4,
+    multiPrice5,
+    rebirthPrice1,
+    rebirthPrice2,
+  };
+  localStorage.setItem('gameData', JSON.stringify(gameData));
+}
+
 //Rebirth Upgrades
 function rebirth1() {
   if (multi >= rebirthPrice1) {
     rebirth += 1;
     rebirthReset();
     updateUI();
+    saveGame(); 
   }
 }
 function rebirth2() {
@@ -27,19 +73,24 @@ function rebirth2() {
     rebirth += 5;
     rebirthReset();
     updateUI();
+    saveGame(); 
   }
 }
-
 
 //Rebirth Reset
 function rebirthReset() {
   multi = 1;
-  (multiAmount1 = 1), (multiAmount2 = 5), (multiAmount3 = 10);
-  (multiPrice1 = 5), (multiPrice2 = 50), (multiPrice3 = 500);
+  multiAmount1 = 1;
+  multiAmount2 = 5;
+  multiAmount3 = 10;
+  multiPrice1 = 5;
+  multiPrice2 = 50;
+  multiPrice3 = 500;
   multiAmount1 *= rebirth;
   multiAmount2 *= rebirth;
   multiAmount3 *= rebirth;
   updateUI();
+  saveGame(); // Save after reset
 }
 
 //Multi Upgrades
@@ -49,6 +100,7 @@ function multiUpgrade1() {
     multi += multiAmount1;
     multiPrice1 *= 1.5;
     updateUI();
+    saveGame(); 
   }
 }
 function multiUpgrade2() {
@@ -57,6 +109,7 @@ function multiUpgrade2() {
     multi += multiAmount2;
     multiPrice2 *= 1.5;
     updateUI();
+    saveGame(); 
   }
 }
 function multiUpgrade3() {
@@ -65,6 +118,7 @@ function multiUpgrade3() {
     multi += multiAmount3;
     multiPrice3 *= 1.5;
     updateUI();
+    saveGame(); 
   }
 }
 function multiUpgrade4() {
@@ -73,6 +127,7 @@ function multiUpgrade4() {
     multi += multiAmount4;
     multiPrice4 *= 1.5;
     updateUI();
+    saveGame(); 
   }
 }
 function multiUpgrade5() {
@@ -81,6 +136,7 @@ function multiUpgrade5() {
     multi += multiAmount5;
     multiPrice5 *= 1.5;
     updateUI();
+    saveGame(); 
   }
 }
 
@@ -116,6 +172,7 @@ function updateUI() {
   buttonUI();
   scoreUI();
 }
+
 //Show scores
 function scoreUI() {
   //Multi Score
@@ -127,45 +184,40 @@ function scoreUI() {
     document.getElementById('score3').style.display = 'block';
   }
 }
+
 //show buttons
 function buttonUI() {
   //Multi Buttons
-
-  //Multi Button 1
   if (money >= 5) {
     document.getElementById('multiButton1').style.display = 'block';
   }
-  //Multi Button 2
   if (money >= 45) {
     document.getElementById('multiButton2').style.display = 'block';
   }
-  //Multi Button 3
   if (money >= 450) {
     document.getElementById('multiButton3').style.display = 'block';
   }
-  //Multi Button 4
   if (rebirth >= 2) {
     document.getElementById('multiButton4').style.display = 'block';
   }
-  //Multi Button 5
   if (rebirth >= 5) {
     document.getElementById('multiButton5').style.display = 'block';
   }
 
   //Rebirth Buttons
-
-  //Rebirth Button 1
   if (multi >= 50) {
     document.getElementById('rebirthButton1').style.display = 'block';
   }
-  //Rebirth Button 2
   if (multi >= 500) {
     document.getElementById('rebirthButton2').style.display = 'block';
   }
 }
+
 function addMoney() {
   money += multi;
   updateUI();
+  saveGame(); // Save after adding money
 }
+
 setInterval(addMoney, 1000);
-window.onload = updateUI;
+window.onload = loadGame; // Load game data on window load
