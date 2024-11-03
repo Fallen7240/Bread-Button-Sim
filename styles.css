@@ -1,0 +1,54 @@
+#multiButton1 {
+  display: none;
+}
+#multiButton2 {
+  display: none;
+}
+#multiButton3 {
+  display: none;
+}
+#score2 {
+  display: none;
+}
+#score3 {
+  display: none;
+}
+#rebirthButton1 {
+  display: none;
+}
+#rebirthButton2 {
+  display: none;
+}
+
+.multiUpgrades {
+  display: flex;
+  gap: 10px;
+}
+.rebirthUpgrades {
+  display: flex;
+  gap: 10px;
+}
+.multiButton {
+  background-color: rgb(233, 73, 73);
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 5px;
+  border-color: red;
+}
+.rebirthButton {
+  background-color: rgb(175, 0, 175);
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 5px;
+  border-color: purple;
+}
+body {
+  background-color: rgb(109, 190, 245);
+}
+.score {
+  color: white;
+  font-weight: bold;
+  font-size: large;
+}
