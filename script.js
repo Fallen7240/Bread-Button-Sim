@@ -65,7 +65,7 @@ function rebirth1() {
     rebirth += 1;
     rebirthReset();
     updateUI();
-    saveGame(); 
+    saveGame();
   }
 }
 function rebirth2() {
@@ -73,7 +73,7 @@ function rebirth2() {
     rebirth += 5;
     rebirthReset();
     updateUI();
-    saveGame(); 
+    saveGame();
   }
 }
 
@@ -94,50 +94,80 @@ function rebirthReset() {
 }
 
 //Multi Upgrades
-function multiUpgrade1() {
-  if (money >= multiPrice1) {
-    money -= multiPrice1;
-    multi += multiAmount1;
-    multiPrice1 *= 1.5;
-    updateUI();
-    saveGame(); 
+
+function upgradeMultiplier(upgradeIndex) {
+  let price;
+  let amount;
+
+  switch (upgradeIndex) {
+    case 0:
+      price = multiPrice1;
+      amount = multiAmount1;
+      break;
+    case 1:
+      price = multiPrice2;
+      amount = multiAmount2;
+      break;
+    case 2:
+      price = multiPrice3;
+      amount = multiAmount3;
+      break;
+    case 3:
+      price = multiPrice4;
+      amount = multiAmount4;
+      break;
+    case 4:
+      price = multiPrice5;
+      amount = multiAmount5;
+      break;
   }
+
+  if (money >= price) {
+    money -= price;
+    multi += amount;
+
+    // Update the corresponding price directly
+    switch (upgradeIndex) {
+      case 0:
+        multiPrice1 *= 1.5;
+        break;
+      case 1:
+        multiPrice2 *= 1.5;
+        break;
+      case 2:
+        multiPrice3 *= 1.5;
+        break;
+      case 3:
+        multiPrice4 *= 1.5;
+        break;
+      case 4:
+        multiPrice5 *= 1.5;
+        break;
+    }
+
+    updateUI();
+    saveGame(); // Save game after purchase
+  }
+}
+function multiUpgrade1() {
+  console.log('Upgrade 1 clicked');
+  upgradeMultiplier(0);
 }
 function multiUpgrade2() {
-  if (money >= multiPrice2) {
-    money -= multiPrice2;
-    multi += multiAmount2;
-    multiPrice2 *= 1.5;
-    updateUI();
-    saveGame(); 
-  }
+  console.log('Upgrade 2 clicked');
+  upgradeMultiplier(1);
 }
 function multiUpgrade3() {
-  if (money >= multiPrice3) {
-    money -= multiPrice3;
-    multi += multiAmount3;
-    multiPrice3 *= 1.5;
-    updateUI();
-    saveGame(); 
-  }
+  console.log('Upgrade 3 clicked');
+  upgradeMultiplier(2);
 }
 function multiUpgrade4() {
-  if (money >= multiPrice4) {
-    money -= multiPrice4;
-    multi += multiAmount4;
-    multiPrice4 *= 1.5;
-    updateUI();
-    saveGame(); 
-  }
+  console.log('Upgrade 4 clicked');
+  upgradeMultiplier(3);
 }
 function multiUpgrade5() {
-  if (money >= multiPrice5) {
-    money -= multiPrice5;
-    multi += multiAmount5;
-    multiPrice5 *= 1.5;
-    updateUI();
-    saveGame(); 
-  }
+  console.log('Upgrade 5 clicked');
+  upgradeMultiplier(4);
 }
 
 function updateUI() {
