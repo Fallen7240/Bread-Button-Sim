@@ -249,8 +249,8 @@ function buttonUI() {
 function addMoney() {
   money += multi;
   updateUI();
-  saveGame(); // Save after adding money
+  saveGame();
 }
 
 setInterval(addMoney, 1000);
-window.onload = loadGame; // Load game data on window load
+window.onload = loadGame; 
