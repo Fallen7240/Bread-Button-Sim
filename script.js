@@ -101,10 +101,8 @@ function saveGame() {
   localStorage.setItem('gameData', JSON.stringify(gameData));
 }
 function resetGame() {
-  // Clear localStorage
   localStorage.clear();
 
-  // Reset the game variables to their defaults
   money = 0;
   multi = 1;
   rebirth = 1;
@@ -135,10 +133,10 @@ function resetGame() {
   rebirthPrice3 = 5000;
   rebirthPrice4 = 500;
   rebirthPrice5 = 5000;
-
-  // Update UI and save the newly reset data
+  
   updateUI();
   saveGame();
+  location.reload();
 }
 //Rebirth Upgrades
 function upgradeRebirth(rebirthIndex) {
