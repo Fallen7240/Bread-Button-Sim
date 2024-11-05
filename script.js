@@ -100,9 +100,48 @@ function saveGame() {
   };
   localStorage.setItem('gameData', JSON.stringify(gameData));
 }
+function resetGame() {
+  // Clear localStorage
+  localStorage.clear();
 
+  // Reset the game variables to their defaults
+  money = 0;
+  multi = 1;
+  rebirth = 1;
+  multiAmount1 = 1;
+  multiAmount2 = 5;
+  multiAmount3 = 10;
+  multiAmount4 = 25;
+  multiAmount5 = 50;
+  multiAmount6 = 150;
+  multiAmount7 = 250;
+  multiAmount8 = 500;
+  multiAmount9 = 750;
+  multiAmount10 = 1000;
+
+  multiPrice1 = 5;
+  multiPrice2 = 50;
+  multiPrice3 = 500;
+  multiPrice4 = 5000;
+  multiPrice5 = 10000;
+  multiPrice6 = 25000;
+  multiPrice7 = 50000;
+  multiPrice8 = 75000;
+  multiPrice9 = 100000;
+  multiPrice10 = 250000;
+
+  rebirthPrice1 = 100;
+  rebirthPrice2 = 500;
+  rebirthPrice3 = 5000;
+  rebirthPrice4 = 500;
+  rebirthPrice5 = 5000;
+
+  // Update UI and save the newly reset data
+  updateUI();
+  saveGame();
+}
 //Rebirth Upgrades
-function upgradeRebirth(upgradeInde2) {
+function upgradeRebirth(rebirthIndex) {
   let price2;
   let amount2;
 
@@ -130,7 +169,7 @@ function upgradeRebirth(upgradeInde2) {
 
   }
 
-  if (money >= price2) {
+  if (multi >= price2) {
     multi -= price2;
     rebirth += amount2;
 
