@@ -438,6 +438,16 @@ function buttonUI() {
   if (multi >= 250) {
     document.getElementById('rebirthButton2').style.display = 'block';
   }
+  if (multi >= 2500) {
+    document.getElementById('rebirthButton3').style.display = 'block';
+  }
+  if (multi >= 5000) {
+    document.getElementById('rebirthButton4').style.display = 'block';
+  }
+  if (multi >= 12500) {
+    document.getElementById('rebirthButton5').style.display = 'block';
+  }
+
 }
 
 function addMoney() {
