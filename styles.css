@@ -1,38 +1,32 @@
-#multiButton1 {
-  display: none;
-}
-#multiButton2 {
-  display: none;
-}
-#multiButton3 {
-  display: none;
-}
-#multiButton4 {
-  display: none;
-}
-#multiButton5 {
-  display: none;
-}
-#score2 {
-  display: none;
-}
-#score3 {
-  display: none;
-}
-#rebirthButton1 {
-  display: none;
-}
-#rebirthButton2 {
+#multiButton1,
+#multiButton2, 
+#multiButton3,
+#multiButton4,
+#multiButton5,
+#multiButton6,
+#multiButton7, 
+#multiButton8,
+#multiButton9,
+#multiButton10,
+#score2,
+#score3,
+#rebirthButton1,
+#rebirthButton2,
+#rebirthButton3,
+#rebirthButton4,
+#rebirthButton5 {
   display: none;
 }
 
 .multiUpgrades {
-  display: flex;
   gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
 }
 .rebirthUpgrades {
-  display: flex;
   gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
 }
 .multiButton {
   background-color: rgb(233, 73, 73);
@@ -57,15 +51,17 @@ body {
   color: white;
   font-weight: bold;
   font-size: large;
-  display: flex;
-  gap: 10px;
 }
 .info {
   color: white;
   font-size: medium;
   font-weight: bold;
-  position: absolute; 
-  bottom: 0; 
-  right: 0; 
-  margin: 10px; 
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}
+.scoreCounter {
+  display: flex;
+  gap: 10px;
 }
