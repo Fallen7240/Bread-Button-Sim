@@ -64,6 +64,16 @@ body {
   right: 0;
   margin: 10px;
 }
+.resetButton {
+  color: black;
+  font-size: medium;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  right: 1;
+  margin: 10px;
+
+}
 .scoreCounter {
   display: flex;
   gap: 10px;
