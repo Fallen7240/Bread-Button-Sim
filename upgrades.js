@@ -62,64 +62,84 @@ function upgradeMultiplier(upgradeIndex) {
 
     switch (upgradeIndex) {
       case 0:
-        if (multiUpgrade1 >= 10) {
+        if (multiUpgrade1 >= 15) {
           multiPrice1 *= 1.5;
+        } if (multiUpgrade1 >= 10) {
+          multiPrice1 *= 1.35;
         }
-        multiPrice1 *= 1.25;
-        break;
+        multiPrice1 *= 1.15;
+       break;
       case 1:
-        if (multiUpgrade2 >= 10) {
+        if (multiUpgrade2 >= 15) {
           multiPrice2 *= 1.5;
+        } if (multiUpgrade2 >= 10) {
+          multiPrice2 *= 1.35;
         }
-        multiPrice2 *= 1.25;
+        multiPrice2 *= 1.15;
         break;
       case 2:
-        if (multiUpgrade3 >= 10) {
+        if (multiUpgrade3 >= 15) {
           multiPrice3 *= 1.5;
+        } if (multiUpgrade3 >= 10) {
+          multiPrice3 *= 1.35;
         }
-        multiPrice3 *= 1.25;
+        multiPrice3 *= 1.15;
         break;
       case 3:
-        if (multiUpgrade4 >= 10) {
+        if (multiUpgrade4 >= 15) {
           multiPrice4 *= 1.5;
+        } if (multiUpgrade4 >= 10) {
+          multiPrice4 *= 1.35;
         }
-        multiPrice4 *= 1.25;
+        multiPrice4 *= 1.15;
         break;
       case 4:
-        if (multiUpgrade5 >= 10) {
+        if (multiUpgrade5 >= 15) {
           multiPrice5 *= 1.5;
+        } if (multiUpgrade5 >= 10) {
+          multiPrice5 *= 1.35;
         }
-        multiPrice5 *= 1.25;
+        multiPrice5 *= 1.15;
         break;
       case 5:
-        if (multiUpgrade6 >= 10) {
+        if (multiUpgrade6 >= 15) {
           multiPrice6 *= 1.5;
+        } if (multiUpgrade6 >= 10) {
+          multiPrice6 *= 1.35;
         }
-        multiPrice6 *= 1.25;
+        multiPrice6 *= 1.15;
         break;
       case 6:
-        if (multiUpgrade7 >= 10) {
+        if (multiUpgrade7 >= 15) {
           multiPrice7 *= 1.5;
+        } if (multiUpgrade7 >= 10) {
+          multiPrice7 *= 1.35;
         }
-        multiPrice7 *= 1.25;
+        multiPrice7 *= 1.15;
         break;
       case 7:
-        if (multiUpgrade8 >= 10) {
+        if (multiUpgrade8 >= 15) {
           multiPrice8 *= 1.5;
+        } if (multiUpgrade8 >= 10) {
+          multiPrice8 *= 1.35;
         }
-        multiPrice8 *= 1.25;
+        multiPrice8 *= 1.15;
         break;
       case 8:
-        if (multiUpgrade9 >= 10) {
+        if (multiUpgrade9 >= 15) {
           multiPrice9 *= 1.5;
+        } if (multiUpgrade9 >= 10) {
+          multiPrice9 *= 1.35;
         }
-        multiPrice9 *= 1.25;
+        multiPrice9 *= 1.15;
         break;
       case 9:
-        if (multiUpgrade10 >= 10) {
+        if (multiUpgrade10 >= 15) {
           multiPrice10 *= 1.5;
+        } if (multiUpgrade10 >= 10) {
+          multiPrice10 *= 1.35;
         }
-        multiPrice10 *= 1.25;
+        multiPrice10 *= 1.15;
         break;
     }
 
@@ -233,60 +253,90 @@ function upgradeRebirth(rebirthIndex) {
 
     switch (rebirthIndex) {
       case 0:
+        if (rebirthUpgrade1Bought >= 15) {
+          rebirthPrice1 *= 1.5;
+        } 
         if (rebirthUpgrade1Bought >= 10) {
           rebirthPrice1 *= 1.35;
         }
         rebirthPrice1 *= 1.15;
         break;
       case 1:
+        if (rebirthUpgrade2Bought >= 15) {
+          rebirthPrice2 *= 1.5;
+        } 
         if (rebirthUpgrade2Bought >= 10) {
           rebirthPrice2 *= 1.35;
         }
         rebirthPrice2 *= 1.15;
         break;
       case 2:
+        if (rebirthUpgrade3Bought >= 15) {
+          rebirthPrice3 *= 1.5;
+        } 
         if (rebirthUpgrade3Bought >= 10) {
           rebirthPrice3 *= 1.35;
         }
         rebirthPrice3 *= 1.15;
         break;
       case 3:
+        if (rebirthUpgrade4Bought >= 15) {
+          rebirthPrice4 *= 1.5;
+        } 
         if (rebirthUpgrade4Bought >= 10) {
           rebirthPrice4 *= 1.35;
         }
         rebirthPrice4 *= 1.15;
         break;
       case 4:
+        if (rebirthUpgrade4Bought >= 15) {
+          rebirthPrice4 *= 1.5;
+        } 
         if (rebirthUpgrade5Bought >= 10) {
           rebirthPrice5 *= 1.35;
         }
         rebirthPrice5 *= 1.15;
         break;
       case 5:
+        if (rebirthUpgrade6Bought >= 15) {
+          rebirthPrice6 *= 1.5;
+        } 
         if (rebirthUpgrade6Bought >= 10) {
           rebirthPrice6 *= 1.35;
         }
         rebirthPrice6 *= 1.15;
         break;
       case 6:
+        if (rebirthUpgrade7Bought >= 15) {
+          rebirthPrice7 *= 1.5;
+        } 
         if (rebirthUpgrade7Bought >= 10) {
           rebirthPrice7 *= 1.35;
         }
         rebirthPrice7 *= 1.15;
         break;
       case 7:
+        if (rebirthUpgrade8Bought >= 15) {
+          rebirthPrice8 *= 1.5;
+        } 
         if (rebirthUpgrade8Bought >= 10) {
           rebirthPrice8 *= 1.35;
         }
         rebirthPrice8 *= 1.15;
         break;
       case 8:
+        if (rebirthUpgrade8Bought >= 15) {
+          rebirthPrice8 *= 1.5;
+        } 
         if (rebirthUpgrade9Bought >= 10) {
           rebirthPrice9 *= 1.35;
         }
         rebirthPrice9 *= 1.15;
         break;
       case 9:
+        if (rebirthUpgrade10Bought >= 15) {
+          rebirthPrice10 *= 1.5;
+        } 
         if (rebirthUpgrade10Bought >= 10) {
           rebirthPrice10 *= 1.35;
         }
@@ -351,6 +401,51 @@ function upgradeAscension(ascensionIndex) {
       amount = ascensionAmount1;
       ascensionUpgrade1Bought += 1;
       break;
+    case 1:
+      price = ascensionPrice2;
+      amount = ascensionAmount2;
+      ascensionUpgrade2Bought += 1;
+      break;
+    case 2:
+      price = ascensionPrice3;
+      amount = ascensionAmount3;
+      ascensionUpgrade3Bought += 1;
+      break;
+    case 3:
+      price = ascensionPrice4;
+      amount = ascensionAmount4;
+      ascensionUpgrade4Bought += 1;
+      break;
+    case 4:
+      price = ascensionPrice5;
+      amount = ascensionAmount5;
+      ascensionUpgrade5Bought += 1;
+      break;
+    case 5:
+      price = ascensionPrice6;
+      amount = ascensionAmount6;
+      ascensionUpgrade6Bought += 1;
+      break;
+    case 6:
+      price = ascensionPrice7;
+      amount = ascensionAmount7;
+      ascensionUpgrade7Bought += 1;
+      break;
+    case 7:
+      price = ascensionPrice8;
+      amount = ascensionAmount8;
+      ascensionUpgrade8Bought += 1;
+      break;
+    case 8:
+      price = ascensionPrice9;
+      amount = ascensionAmount9;
+      ascensionUpgrade9Bought += 1;
+      break;
+    case 9:
+      price = ascensionPrice10;
+      amount = ascensionAmount10;
+      ascensionUpgrade10Bought += 1;
+      break;
   }
 
   if (rebirth >= price) {
@@ -361,59 +456,146 @@ function upgradeAscension(ascensionIndex) {
       case 0:
         if (ascensionUpgrade1Bought > 15) {
           ascensionPrice1 *= 1.5;
-        }
-       else { if (ascensionUpgrade1Bought >= 10) {
+        } else if (ascensionUpgrade1Bought >= 10) {
           ascensionPrice1 *= 1.35;
-        }
-        else { 
+        } else {
           ascensionPrice1 *= 1.15;
         }
-      }
         break;
-     
+      case 1:
+        if (ascensionUpgrade2Bought > 15) {
+          ascensionPrice2 *= 1.5;
+        } else if (ascensionUpgrade2Bought >= 10) {
+          ascensionPrice2 *= 1.35;
+        } else {
+          ascensionPrice2 *= 1.15;
+        }
+        break;
+      case 2:
+        if (ascensionUpgrade3Bought > 15) {
+          ascensionPrice3 *= 1.5;
+        } else if (ascensionUpgrade3Bought >= 10) {
+          ascensionPrice3 *= 1.35;
+        } else {
+          ascensionPrice3 *= 1.15;
+        }
+        break;
+      case 3:
+        if (ascensionUpgrade4Bought > 15) {
+          ascensionPrice4 *= 1.5;
+        } else if (ascensionUpgrade4Bought >= 10) {
+          ascensionPrice4 *= 1.35;
+        } else {
+          ascensionPrice4 *= 1.15;
+        }
+        break;
+      case 4:
+        if (ascensionUpgrade5Bought > 15) {
+          ascensionPrice5 *= 1.5;
+        } else if (ascensionUpgrade5Bought >= 10) {
+          ascensionPrice5 *= 1.35;
+        } else {
+          ascensionPrice5 *= 1.15;
+        }
+        break;
+      case 5:
+        if (ascensionUpgrade6Bought > 15) {
+          ascensionPrice6 *= 1.5;
+        } else if (ascensionUpgrade6Bought >= 10) {
+          ascensionPrice6 *= 1.35;
+        } else {
+          ascensionPrice6 *= 1.15;
+        }
+        break;
+      case 6:
+        if (ascensionUpgrade7Bought > 15) {
+          ascensionPrice7 *= 1.5;
+        } else if (ascensionUpgrade7Bought >= 10) {
+          ascensionPrice7 *= 1.35;
+        } else {
+          ascensionPrice7 *= 1.15;
+        }
+        break;
+      case 7:
+        if (ascensionUpgrade8Bought > 15) {
+          ascensionPrice8 *= 1.5;
+        } else if (ascensionUpgrade8Bought >= 10) {
+          ascensionPrice8 *= 1.35;
+        } else {
+          ascensionPrice8 *= 1.15;
+        }
+        break;
+      case 8:
+        if (ascensionUpgrade9Bought > 15) {
+          ascensionPrice9 *= 1.5;
+        } else if (ascensionUpgrade9Bought >= 10) {
+          ascensionPrice9 *= 1.35;
+        } else {
+          ascensionPrice9 *= 1.15;
+        }
+        break;
+      case 9:
+        if (ascensionUpgrade10Bought > 15) {
+          ascensionPrice10 *= 1.5;
+        } else if (ascensionUpgrade10Bought >= 10) {
+          ascensionPrice10 *= 1.35;
+        } else {
+          ascensionPrice10 *= 1.15;
+        }
+        break;
     }
+
     ascensionReset();
     updateUI();
     saveGame();
   }
 }
 
-function ascension() {
+function ascension1() {
   console.log('Ascension 1 clicked');
   upgradeAscension(0);
 }
-function ascension() {
+
+function ascension2() {
   console.log('Ascension 2 clicked');
   upgradeAscension(1);
 }
+
 function ascension3() {
   console.log('Ascension 3 clicked');
   upgradeAscension(2);
 }
+
 function ascension4() {
   console.log('Ascension 4 clicked');
   upgradeAscension(3);
 }
+
 function ascension5() {
   console.log('Ascension 5 clicked');
   upgradeAscension(4);
 }
+
 function ascension6() {
   console.log('Ascension 6 clicked');
-  upgradeRebirth(5);
+  upgradeAscension(5);
 }
+
 function ascension7() {
   console.log('Ascension 7 clicked');
   upgradeAscension(6);
 }
+
 function ascension8() {
   console.log('Ascension 8 clicked');
   upgradeAscension(7);
 }
+
 function ascension9() {
   console.log('Ascension 9 clicked');
   upgradeAscension(8);
 }
+
 function ascension10() {
   console.log('Ascension 10 clicked');
   upgradeAscension(9);
