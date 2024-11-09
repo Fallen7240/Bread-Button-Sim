@@ -1,1 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+	<title>Bread Button Sim</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="styles.css" />
+	<script src="script.js"></script>
+	<script src="upgrades.js"></script>
+</head>
+
+<body>
+	<div class="scoreCounter">
+		<p id="score1" class="score">Money <span id="money">0</span></p>
+		<p id="score2" class="score">Multi <span id="multi">1</span></p>
+		<p id="score3" class="score">Rebirth <span id="rebirth">1</span></p>
+	<p id="score4" class="score">Ascension <span id="ascension">1</span></p>
+
+	</div>
+
+	<div class="multiUpgrades">
+		<button class="multiButton" id="multiButton1" onclick="multiUpgrade1()">
+        +<span id="multiAmount1">1</span> Multi<br />$<span id="multiPrice1"
+          >5</span
+        >
+      </button>
+		<button class="multiButton" id="multiButton2" onclick="multiUpgrade2()">
+        +<span id="multiAmount2">5</span> Multi<br />$<span id="multiPrice2"
+          >250</span
+        >
+      </button>
+		<button class="multiButton" id="multiButton3" onclick="multiUpgrade3()">
+        +<span id="multiAmount3">10</span> Multi<br />$<span id="multiPrice3"
+          >250</span
+        >
+      </button>
+		<button class="multiButton" id="multiButton4" onclick="multiUpgrade4()">
+        +<span id="multiAmount4">25</span> Multi<br />$<span id="multiPrice4"
+          >2500</span
+        >
+      </button>
+		<button class="multiButton" id="multiButton5" onclick="multiUpgrade5()">
+        +<span id="multiAmount5">50</span> Multi<br />$<span id="multiPrice5"
+          >5000</span
+        >
+      </button>
+		<button class="multiButton" id="multiButton6" onclick="multiUpgrade6()">
+        +<span id="multiAmount6">150</span> Multi<br />$<span id="multiPrice6"
+          >12500</span
+        >
+      </button>
+		<button class="multiButton" id="multiButton7" onclick="multiUpgrade7()">
+        +<span id="multiAmount7">250</span> Multi<br />$<span id="multiPrice7"
+          >25000</span
+        >
+      </button>
+		<button class="multiButton" id="multiButton8" onclick="multiUpgrade8()">
+        +<span id="multiAmount8">500</span> Multi<br />$<span id="multiPrice8"
+          >37500</span
+        >
+      </button>
+		<button class="multiButton" id="multiButton9" onclick="multiUpgrade9()">
+        +<span id="multiAmount9">750</span> Multi<br />$<span id="multiPrice9"
+          >50000</span
+        >
+      </button>
+		<button class="multiButton" id="multiButton10" onclick="multiUpgrade10()">
+        +<span id="multiAmount10">1000</span> Multi<br />$<span
+          id="multiPrice10"
+          >125000</span
+        >
+      </button>
+	</div>
+	<br />
+
+	<div class="rebirthUpgrades">
+		<button class="rebirthButton" id="rebirthButton1" onclick="rebirth1()">
+      +<span id="rebirthAmount1">1</span> Rebirth<br /><span id="rebirthPrice1">100</span> Multi
+    </button>
+		<button class="rebirthButton" id="rebirthButton2" onclick="rebirth2()">
+      +<span id="rebirthAmount2">5</span> Rebirth<br /><span id="rebirthPrice2">500</span> Multi
+    </button>
+		<button class="rebirthButton" id="rebirthButton3" onclick="rebirth3()">
+      +<span id="rebirthAmount3">15</span> Rebirth<br /><span id="rebirthPrice3">5000</span> Multi
+    </button>
+		<button class="rebirthButton" id="rebirthButton4" onclick="rebirth4()">
+      +<span id="rebirthAmount4">50</span> Rebirth<br /><span id="rebirthPrice4">10000</span> Multi
+    </button>
+		<button class="rebirthButton" id="rebirthButton5" onclick="rebirth5()">
+      +<span id="rebirthAmount5">100</span> Rebirth<br /><span id="rebirthPrice5">25000</span> Multi
+    </button>
+		<button class="rebirthButton" id="rebirthButton6" onclick="rebirth6()">
+      +<span id="rebirthAmount6">150</span> Rebirth<br /><span id="rebirthPrice6">35000</span> Multi
+    </button>
+		<button class="rebirthButton" id="rebirthButton7" onclick="rebirth7()">
+      +<span id="rebirthAmount7">250</span> Rebirth<br /><span id="rebirthPrice7">50000</span> Multi
+    </button>
+		<button class="rebirthButton" id="rebirthButton8" onclick="rebirth8()">
+      +<span id="rebirthAmount8">500</span> Rebirth<br /><span id="rebirthPrice8">65000</span> Multi
+    </button>
+		<button class="rebirthButton" id="rebirthButton9" onclick="rebirth9()">
+      +<span id="rebirthAmount9">750</span> Rebirth<br /><span id="rebirthPrice9">75000</span> Multi
+    </button>
+		<button class="rebirthButton" id="rebirthButton10" onclick="rebirth10()">
+      +<span id="rebirthAmount10">1000</span> Rebirth<br /><span id="rebirthPrice10">100000</span> Multi
+    </button>
+	</div>
+	<br />
+	<div class="ascensionUpgrades">
+		<button class="ascensionButton" id="ascensionButton1" onclick="ascension1()">
+  +1 Ascension<br /><span id="ascensionPrice1">100</span> Rebirth
+</button>
+		<button class="ascensionButton" id="ascensionButton2" onclick="ascension2()">
++5 Ascension<br /><span id="ascensionPrice2">500</span> Rebirth
+</button>
+		<button class="ascensionButton" id="ascensionButton3" onclick="ascension3()">
++15 Ascension<br /><span id="ascensionPrice3">5000</span> Rebirth
+</button>
+		<button class="ascensionButton" id="ascensionButton4" onclick="ascension4()">
++50 Ascension<br /><span id="ascensionPrice4">10000</span> Rebirth
+</button>
+		<button class="ascensionButton" id="ascensionButton5" onclick="ascension5()">
++100 Ascension<br /><span id="ascensionPrice5">25000</span> Rebirth
+</button>
+		<button class="ascensionButton" id="ascensionButton6" onclick="ascension6()">
++150 Ascension<br /><span id="ascensionPrice6">35000</span> Rebirth
+</button>
+		<button class="ascensionButton" id="ascensionButton7" onclick="ascension7()">
++250 Ascension<br /><span id="ascensionPrice7">50000</span> Rebirth
+</button>
+		<button class="ascensionButton" id="ascensionButton8" onclick="ascension8()">
++500 Ascension<br /><span id="ascensionPrice8">65000</span> Rebirth
+</button>
+		<button class="ascensionButton" id="ascensionButton9" onclick="ascension9()">
++750 Ascension<br /><span id="ascensionPrice9">75000</span> Rebirth
+</button>
+		<button class="ascensionButton" id="ascensionButton10" onclick="ascension10()">
++1000 Ascension<br /><span id="ascensionPrice10">100000</span> Rebirth
+</button>
+	</div>
+
+	<div class="extra">
+		<p class="info">Made With love by Bread7043 and Fallen7240</p>
+		<button class="resetButton" onclick="resetGame()">Reset Game</button>
+	</div>
+</body>
+
+</html>
