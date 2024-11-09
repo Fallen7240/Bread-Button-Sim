@@ -137,6 +137,43 @@ function rebirthReset() {
   updateUI();
   saveGame();
 }
+//Ascension Reset
+function ascensionReset() {
+  rebirth = 1;
+  rebirthAmount1 = 1;
+  rebirthAmount2 = 5;
+  rebirthAmount3 = 15;
+  rebirthAmount4 = 50;
+  rebirthAmount5 = 100;
+  rebirthAmount6 = 150;
+  rebirthAmount7 = 250;
+  rebirthAmount8 = 500;
+  rebirthAmount9 = 750;
+  rebirthAmount10 = 1000;
+  rebirthPrice1 = 100;
+  rebirthPrice2 = 500;
+  rebirthPrice3 = 5000;
+  rebirthPrice4 = 10000;
+  rebirthPrice5 = 25000;
+  rebirthPrice6 = 35000;
+  rebirthPrice7 = 50000;
+  rebirthPrice8 = 65000;
+  rebirthPrice9 = 75000;
+  rebirthPrice10 = 100000;
+  rebirthAmount1 *= ascension;
+  rebirthAmount2 *= ascension;
+  rebirthAmount3 *= ascension;
+  rebirthAmount4 *= ascension;
+  rebirthAmount5 *= ascension;
+  rebirthAmount6 *= ascension;
+  rebirthAmount7 *= ascension;
+  rebirthAmount8 *= ascension;
+  rebirthAmount9 *= ascension;
+  rebirthAmount10 *= ascension;
+
+  updateUI();
+  saveGame();
+}
 
 function updateUI() {
   document.getElementById('money').innerHTML =
@@ -192,6 +229,26 @@ function updateUI() {
     Math.floor(multiPrice10).toLocaleString();
 
   // Update Rebirth Buttons and Prices
+  document.getElementById('rebirthAmount1').innerHTML =
+    Math.floor(rebirthAmount1).toLocaleString();
+  document.getElementById('rebirthAmount2').innerHTML =
+    Math.floor(rebirthAmount2).toLocaleString();
+  document.getElementById('rebirthAmount3').innerHTML =
+    Math.floor(rebirthAmount3).toLocaleString();
+  document.getElementById('rebirthAmount4').innerHTML =
+    Math.floor(rebirthAmount4).toLocaleString();
+  document.getElementById('rebirthAmount5').innerHTML =
+    Math.floor(rebirthAmount5).toLocaleString();
+  document.getElementById('rebirthAmount6').innerHTML =
+    Math.floor(rebirthAmount6).toLocaleString();
+  document.getElementById('rebirthAmount7').innerHTML =
+    Math.floor(rebirthAmount7).toLocaleString();
+  document.getElementById('rebirthAmount8').innerHTML =
+    Math.floor(rebirthAmount8).toLocaleString();
+  document.getElementById('rebirthAmount9').innerHTML =
+    Math.floor(rebirthAmount9).toLocaleString();
+  document.getElementById('rebirthAmount10').innerHTML =
+    Math.floor(rebirthAmount10).toLocaleString();
   document.getElementById('rebirthPrice1').innerHTML =
     Math.floor(rebirthPrice1).toLocaleString();
   document.getElementById('rebirthPrice2').innerHTML =
@@ -250,11 +307,15 @@ function scoreUI() {
   if (multi >= 50) {
     document.getElementById('score3').style.display = 'block';
   }
+  //Ascension Score
+  if (rebirth >= 50) {
+    document.getElementById('score4').style.display = 'block';
+  }
 }
 
 //show buttons
 function buttonUI() {
-  //Multi Buttons
+  // Multi Buttons
   if (money >= 5) {
     document.getElementById('multiButton1').style.display = 'block';
   }
@@ -271,31 +332,31 @@ function buttonUI() {
     document.getElementById('multiButton4').style.display = 'block';
   }
 
-  if (rebirth >= 4) {
+  if (rebirth >= 5) {
     document.getElementById('multiButton5').style.display = 'block';
   }
 
-  if (rebirth >= 5) {
+  if (rebirth >= 6) {
     document.getElementById('multiButton6').style.display = 'block';
   }
 
-  if (rebirth >= 6) {
+  if (rebirth >= 7) {
     document.getElementById('multiButton7').style.display = 'block';
   }
 
-  if (rebirth >= 7) {
+  if (rebirth >= 8) {
     document.getElementById('multiButton8').style.display = 'block';
   }
 
-  if (rebirth >= 8) {
+  if (rebirth >= 9) {
     document.getElementById('multiButton9').style.display = 'block';
   }
 
-  if (rebirth >= 9) {
+  if (rebirth >= 10) {
     document.getElementById('multiButton10').style.display = 'block';
   }
 
-  //Rebirth Buttons
+  // Rebirth Buttons
   if (multi >= 50) {
     document.getElementById('rebirthButton1').style.display = 'block';
   }
@@ -334,6 +395,47 @@ function buttonUI() {
 
   if (multi >= 50000) {
     document.getElementById('rebirthButton10').style.display = 'block';
+  }
+
+  // Ascension Buttons
+  if (rebirth >= 50) {
+    document.getElementById('ascensionButton1').style.display = 'block';
+  }
+
+  if (rebirth >= 250) {
+    document.getElementById('ascensionButton2').style.display = 'block';
+  }
+
+  if (rebirth >= 2500) {
+    document.getElementById('ascensionButton3').style.display = 'block';
+  }
+
+  if (rebirth >= 5000) {
+    document.getElementById('ascensionButton4').style.display = 'block';
+  }
+
+  if (rebirth >= 12500) {
+    document.getElementById('ascensionButton5').style.display = 'block';
+  }
+
+  if (rebirth >= 17500) {
+    document.getElementById('ascensionButton6').style.display = 'block';
+  }
+
+  if (rebirth >= 25000) {
+    document.getElementById('ascensionButton7').style.display = 'block';
+  }
+
+  if (rebirth >= 32500) {
+    document.getElementById('ascensionButton8').style.display = 'block';
+  }
+
+  if (rebirth >= 37500) {
+    document.getElementById('ascensionButton9').style.display = 'block';
+  }
+
+  if (rebirth >= 50000) {
+    document.getElementById('ascensionButton10').style.display = 'block';
   }
 }
 
@@ -508,13 +610,13 @@ function saveGame() {
 
 function resetGame() {
   localStorage.clear();
-//main
+  //main
   money = 0;
   multi = 1;
   rebirth = 1;
   ascension = 1;
 
-//multi
+  //multi
   multiAmount1 = 1;
   multiAmount2 = 5;
   multiAmount3 = 10;
@@ -545,7 +647,7 @@ function resetGame() {
   multiUpgrade8Bought = 0;
   multiUpgrade9Bought = 0;
   multiUpgrade10Bought = 0;
-//rebirth
+  //rebirth
   rebirthPrice1 = 100;
   rebirthPrice2 = 500;
   rebirthPrice3 = 5000;
@@ -580,4 +682,3 @@ function addMoney() {
 
 setInterval(addMoney, 1000);
 window.onload = loadGame; // Load game data on window load
-
