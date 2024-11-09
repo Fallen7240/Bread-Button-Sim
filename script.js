@@ -447,6 +447,8 @@ function loadGame() {
     multi = savedData.multi || 1;
     rebirth = savedData.rebirth || 1;
     ascension = savedData.ascension || 1;
+
+    // Multi and Rebirth Amounts and Prices
     multiAmount1 = savedData.multiAmount1 || 1;
     multiAmount2 = savedData.multiAmount2 || 5;
     multiAmount3 = savedData.multiAmount3 || 10;
@@ -457,6 +459,29 @@ function loadGame() {
     multiAmount8 = savedData.multiAmount8 || 500;
     multiAmount9 = savedData.multiAmount9 || 750;
     multiAmount10 = savedData.multiAmount10 || 1000;
+
+    rebirthAmount1 = savedData.rebirthAmount1 || 1;
+    rebirthAmount2 = savedData.rebirthAmount2 || 5;
+    rebirthAmount3 = savedData.rebirthAmount3 || 10;
+    rebirthAmount4 = savedData.rebirthAmount4 || 25;
+    rebirthAmount5 = savedData.rebirthAmount5 || 50;
+    rebirthAmount6 = savedData.rebirthAmount6 || 150;
+    rebirthAmount7 = savedData.rebirthAmount7 || 250;
+    rebirthAmount8 = savedData.rebirthAmount8 || 500;
+    rebirthAmount9 = savedData.rebirthAmount9 || 750;
+    rebirthAmount10 = savedData.rebirthAmount10 || 1000;
+
+    ascensionAmount1 = savedData.ascensionAmount1 || 1;
+    ascensionAmount2 = savedData.ascensionAmount2 || 5;
+    ascensionAmount3 = savedData.ascensionAmount3 || 10;
+    ascensionAmount4 = savedData.ascensionAmount4 || 25;
+    ascensionAmount5 = savedData.ascensionAmount5 || 50;
+    ascensionAmount6 = savedData.ascensionAmount6 || 150;
+    ascensionAmount7 = savedData.ascensionAmount7 || 250;
+    ascensionAmount8 = savedData.ascensionAmount8 || 500;
+    ascensionAmount9 = savedData.ascensionAmount9 || 750;
+    ascensionAmount10 = savedData.ascensionAmount10 || 1000;
+
     multiPrice1 = savedData.multiPrice1 || 5;
     multiPrice2 = savedData.multiPrice2 || 25;
     multiPrice3 = savedData.multiPrice3 || 250;
@@ -490,17 +515,7 @@ function loadGame() {
     ascensionPrice9 = savedData.ascensionPrice9 || 75000;
     ascensionPrice10 = savedData.ascensionPrice10 || 100000;
 
-    rebirthUpgrade1Bought = savedData.rebirthUpgrade1Bought || 0;
-    rebirthUpgrade2Bought = savedData.rebirthUpgrade2Bought || 0;
-    rebirthUpgrade3Bought = savedData.rebirthUpgrade3Bought || 0;
-    rebirthUpgrade4Bought = savedData.rebirthUpgrade4Bought || 0;
-    rebirthUpgrade5Bought = savedData.rebirthUpgrade5Bought || 0;
-    rebirthUpgrade6Bought = savedData.rebirthUpgrade6Bought || 0;
-    rebirthUpgrade7Bought = savedData.rebirthUpgrade7Bought || 0;
-    rebirthUpgrade8Bought = savedData.rebirthUpgrade8Bought || 0;
-    rebirthUpgrade9Bought = savedData.rebirthUpgrade9Bought || 0;
-    rebirthUpgrade10Bought = savedData.rebirthUpgrade10Bought || 0;
-
+    // Multi, Rebirth, Ascension Upgrades Bought
     multiUpgrade1Bought = savedData.multiUpgrade1Bought || 0;
     multiUpgrade2Bought = savedData.multiUpgrade2Bought || 0;
     multiUpgrade3Bought = savedData.multiUpgrade3Bought || 0;
@@ -512,6 +527,17 @@ function loadGame() {
     multiUpgrade9Bought = savedData.multiUpgrade9Bought || 0;
     multiUpgrade10Bought = savedData.multiUpgrade10Bought || 0;
 
+    rebirthUpgrade1Bought = savedData.rebirthUpgrade1Bought || 0;
+    rebirthUpgrade2Bought = savedData.rebirthUpgrade2Bought || 0;
+    rebirthUpgrade3Bought = savedData.rebirthUpgrade3Bought || 0;
+    rebirthUpgrade4Bought = savedData.rebirthUpgrade4Bought || 0;
+    rebirthUpgrade5Bought = savedData.rebirthUpgrade5Bought || 0;
+    rebirthUpgrade6Bought = savedData.rebirthUpgrade6Bought || 0;
+    rebirthUpgrade7Bought = savedData.rebirthUpgrade7Bought || 0;
+    rebirthUpgrade8Bought = savedData.rebirthUpgrade8Bought || 0;
+    rebirthUpgrade9Bought = savedData.rebirthUpgrade9Bought || 0;
+    rebirthUpgrade10Bought = savedData.rebirthUpgrade10Bought || 0;
+
     ascensionUpgrade1Bought = savedData.ascensionUpgrade1Bought || 0;
     ascensionUpgrade2Bought = savedData.ascensionUpgrade2Bought || 0;
     ascensionUpgrade3Bought = savedData.ascensionUpgrade3Bought || 0;
@@ -522,8 +548,9 @@ function loadGame() {
     ascensionUpgrade8Bought = savedData.ascensionUpgrade8Bought || 0;
     ascensionUpgrade9Bought = savedData.ascensionUpgrade9Bought || 0;
     ascensionUpgrade10Bought = savedData.ascensionUpgrade10Bought || 0;
+
+    updateUI();
   }
-  updateUI();
 }
 
 // Save game data to localStorage
@@ -543,6 +570,26 @@ function saveGame() {
     multiAmount8,
     multiAmount9,
     multiAmount10,
+    rebirthAmount1,
+    rebirthAmount2,
+    rebirthAmount3,
+    rebirthAmount4,
+    rebirthAmount5,
+    rebirthAmount6,
+    rebirthAmount7,
+    rebirthAmount8,
+    rebirthAmount9,
+    rebirthAmount10,
+    ascensionAmount1,
+    ascensionAmount2,
+    ascensionAmount3,
+    ascensionAmount4,
+    ascensionAmount5,
+    ascensionAmount6,
+    ascensionAmount7,
+    ascensionAmount8,
+    ascensionAmount9,
+    ascensionAmount10,
     multiPrice1,
     multiPrice2,
     multiPrice3,
@@ -553,16 +600,6 @@ function saveGame() {
     multiPrice8,
     multiPrice9,
     multiPrice10,
-    multiUpgrade1Bought,
-    multiUpgrade2Bought,
-    multiUpgrade3Bought,
-    multiUpgrade4Bought,
-    multiUpgrade5Bought,
-    multiUpgrade6Bought,
-    multiUpgrade7Bought,
-    multiUpgrade8Bought,
-    multiUpgrade9Bought,
-    multiUpgrade10Bought,
     rebirthPrice1,
     rebirthPrice2,
     rebirthPrice3,
@@ -573,16 +610,6 @@ function saveGame() {
     rebirthPrice8,
     rebirthPrice9,
     rebirthPrice10,
-    rebirthUpgrade1Bought,
-    rebirthUpgrade2Bought,
-    rebirthUpgrade3Bought,
-    rebirthUpgrade4Bought,
-    rebirthUpgrade5Bought,
-    rebirthUpgrade6Bought,
-    rebirthUpgrade7Bought,
-    rebirthUpgrade8Bought,
-    rebirthUpgrade9Bought,
-    rebirthUpgrade10Bought,
     ascensionPrice1,
     ascensionPrice2,
     ascensionPrice3,
@@ -593,6 +620,26 @@ function saveGame() {
     ascensionPrice8,
     ascensionPrice9,
     ascensionPrice10,
+    multiUpgrade1Bought,
+    multiUpgrade2Bought,
+    multiUpgrade3Bought,
+    multiUpgrade4Bought,
+    multiUpgrade5Bought,
+    multiUpgrade6Bought,
+    multiUpgrade7Bought,
+    multiUpgrade8Bought,
+    multiUpgrade9Bought,
+    multiUpgrade10Bought,
+    rebirthUpgrade1Bought,
+    rebirthUpgrade2Bought,
+    rebirthUpgrade3Bought,
+    rebirthUpgrade4Bought,
+    rebirthUpgrade5Bought,
+    rebirthUpgrade6Bought,
+    rebirthUpgrade7Bought,
+    rebirthUpgrade8Bought,
+    rebirthUpgrade9Bought,
+    rebirthUpgrade10Bought,
     ascensionUpgrade1Bought,
     ascensionUpgrade2Bought,
     ascensionUpgrade3Bought,
@@ -604,19 +651,16 @@ function saveGame() {
     ascensionUpgrade9Bought,
     ascensionUpgrade10Bought,
   };
-
   localStorage.setItem('gameData', JSON.stringify(gameData));
 }
 
+// Reset game data to default values
 function resetGame() {
-  localStorage.clear();
-  //main
   money = 0;
   multi = 1;
   rebirth = 1;
   ascension = 1;
 
-  //multi
   multiAmount1 = 1;
   multiAmount2 = 5;
   multiAmount3 = 10;
@@ -627,6 +671,29 @@ function resetGame() {
   multiAmount8 = 500;
   multiAmount9 = 750;
   multiAmount10 = 1000;
+
+  rebirthAmount1 = 1;
+  rebirthAmount2 = 5;
+  rebirthAmount3 = 10;
+  rebirthAmount4 = 25;
+  rebirthAmount5 = 50;
+  rebirthAmount6 = 150;
+  rebirthAmount7 = 250;
+  rebirthAmount8 = 500;
+  rebirthAmount9 = 750;
+  rebirthAmount10 = 1000;
+
+  ascensionAmount1 = 1;
+  ascensionAmount2 = 5;
+  ascensionAmount3 = 10;
+  ascensionAmount4 = 25;
+  ascensionAmount5 = 50;
+  ascensionAmount6 = 150;
+  ascensionAmount7 = 250;
+  ascensionAmount8 = 500;
+  ascensionAmount9 = 750;
+  ascensionAmount10 = 1000;
+
   multiPrice1 = 5;
   multiPrice2 = 25;
   multiPrice3 = 250;
@@ -637,17 +704,7 @@ function resetGame() {
   multiPrice8 = 37500;
   multiPrice9 = 50000;
   multiPrice10 = 125000;
-  multiUpgrade1Bought = 0;
-  multiUpgrade2Bought = 0;
-  multiUpgrade3Bought = 0;
-  multiUpgrade4Bought = 0;
-  multiUpgrade5Bought = 0;
-  multiUpgrade6Bought = 0;
-  multiUpgrade7Bought = 0;
-  multiUpgrade8Bought = 0;
-  multiUpgrade9Bought = 0;
-  multiUpgrade10Bought = 0;
-  //rebirth
+
   rebirthPrice1 = 100;
   rebirthPrice2 = 500;
   rebirthPrice3 = 5000;
@@ -658,6 +715,29 @@ function resetGame() {
   rebirthPrice8 = 65000;
   rebirthPrice9 = 75000;
   rebirthPrice10 = 100000;
+
+  ascensionPrice1 = 100;
+  ascensionPrice2 = 500;
+  ascensionPrice3 = 5000;
+  ascensionPrice4 = 10000;
+  ascensionPrice5 = 25000;
+  ascensionPrice6 = 35000;
+  ascensionPrice7 = 50000;
+  ascensionPrice8 = 65000;
+  ascensionPrice9 = 75000;
+  ascensionPrice10 = 100000;
+
+  multiUpgrade1Bought = 0;
+  multiUpgrade2Bought = 0;
+  multiUpgrade3Bought = 0;
+  multiUpgrade4Bought = 0;
+  multiUpgrade5Bought = 0;
+  multiUpgrade6Bought = 0;
+  multiUpgrade7Bought = 0;
+  multiUpgrade8Bought = 0;
+  multiUpgrade9Bought = 0;
+  multiUpgrade10Bought = 0;
+
   rebirthUpgrade1Bought = 0;
   rebirthUpgrade2Bought = 0;
   rebirthUpgrade3Bought = 0;
@@ -669,9 +749,19 @@ function resetGame() {
   rebirthUpgrade9Bought = 0;
   rebirthUpgrade10Bought = 0;
 
+  ascensionUpgrade1Bought = 0;
+  ascensionUpgrade2Bought = 0;
+  ascensionUpgrade3Bought = 0;
+  ascensionUpgrade4Bought = 0;
+  ascensionUpgrade5Bought = 0;
+  ascensionUpgrade6Bought = 0;
+  ascensionUpgrade7Bought = 0;
+  ascensionUpgrade8Bought = 0;
+  ascensionUpgrade9Bought = 0;
+  ascensionUpgrade10Bought = 0;
+
   updateUI();
   saveGame();
-  location.reload();
 }
 
 function addMoney() {
