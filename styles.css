@@ -11,6 +11,7 @@
 #multiButton10,
 #score2,
 #score3,
+#score4,
 #rebirthButton1,
 #rebirthButton2,
 #rebirthButton3,
@@ -192,4 +193,3 @@ body {
     gap: 20px;
   }
 }
-
