@@ -11,10 +11,10 @@
 
   <body>
     <div class="scoreCounter">
-      <p id="score1" class="score">Money <span id="money">0</span></p>
-      <p id="score2" class="score">Multi <span id="multi">1</span></p>
-      <p id="score3" class="score">Rebirth <span id="rebirth">1</span></p>
-      <p id="score4" class="score">Ascension <span id="ascension">1</span></p>
+      <p id="score1" class="moneyScore">Money <span id="money">0</span></p>
+      <p id="score2" class="multiScore">Multi <span id="multi">1</span></p>
+      <p id="score3" class="rebirthScore">Rebirth <span id="rebirth">1</span></p>
+      <p id="score4" class="ascensionScore">Ascension <span id="ascension">1</span></p>
     </div>
 
     <div class="multiUpgrades">
@@ -218,9 +218,43 @@
       </button>
     </div>
 
-    <div class="extra">
-      <p class="info">Made With love by Bread7043 and Fallen7240</p>
-      <button class="resetButton" onclick="resetGame()">Reset Game</button>
+    <br />
+    <div class="prestigeUpgrades">
+      <button class="prestigeButton" id="prestigeButton1" onclick="prestige1()">
+        +1 Prestige<br /><span id="prestigePrice1">100</span> Ascension
+      </button>
+      <button class="prestigeButton" id="prestigeButton2" onclick="prestige2()">
+        +5 Prestige<br /><span id="prestigePrice2">500</span> Ascension
+      </button>
+      <button class="prestigeButton" id="prestigeButton3" onclick="prestige3()">
+        +15 Prestige<br /><span id="prestigePrice3">5000</span> Ascension
+      </button>
+      <button class="prestigeButton" id="prestigeButton4" onclick="prestige4()">
+        +50 Prestige<br /><span id="prestigePrice4">10000</span> Ascension
+      </button>
+      <button class="prestigeButton" id="prestigeButton5" onclick="prestige5()">
+        +100 Prestige<br /><span id="prestigePrice5">25000</span> Ascension
+      </button>
+      <button class="prestigeButton" id="prestigeButton6" onclick="prestige6()">
+        +150 Prestige<br /><span id="prestigePrice6">35000</span> Ascension
+      </button>
+      <button class="prestigeButton" id="prestigeButton7" onclick="prestige7()">
+        +250 Prestige<br /><span id="prestigePrice7">50000</span> Ascension
+      </button>
+      <button class="prestigeButton" id="prestigeButton8" onclick="prestige8()">
+        +500 Prestige<br /><span id="prestigePrice8">65000</span> Ascension
+      </button>
+      <button class="prestigeButton" id="prestigeButton9" onclick="prestige9()">
+        +750 Prestige<br /><span id="prestigePrice9">75000</span> Ascension
+      </button>
+      <button
+        class="prestigeButton"
+        id="prestigeButton10"
+        onclick="prestige10()"
+      >
+        +1000 Prestige<br /><span id="prestigePrice10">100000</span> Ascension
+      </button>
     </div>
+
   </body>
 </html>
